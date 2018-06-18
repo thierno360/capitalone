@@ -27,7 +27,7 @@ def subscriptions(username,password):
         x+=1
     print(subscription_list)
 
-subscriptions(username="", password="")
+# subscriptions(username="", password="")
 
 def search(search_string):
     search_string = input("Search: ")
@@ -45,7 +45,7 @@ def search(search_string):
         x += 1
     print (search_result_list)
 
-# search(search_string="")
+search(search_string="")
 
 def search_by_genre(genre_selection):
     genre_options = {"1":"Art", "2":"Comedy", "3":"Educational", "4":"Gaming", "5":"Music", "6":"News", "7":"Politics", "8":"Sci-Fi", "9":"Sports", "10":"Technology", "11":"Other Genre"} # a dictionary of the genre options corresponding with a number

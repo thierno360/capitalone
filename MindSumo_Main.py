@@ -150,8 +150,9 @@ def search_web():
             }
             )
             x+=1
-            # if results_search == []:
-            #     return "No Result"
+
+        if results_search == []:
+            return render_template('error.html') #throws error page if none are found
 
         return render_template('search2.html', inquiry=inquiry, results_search=results_search)
 
@@ -175,8 +176,9 @@ def subscriptions_web():
             }
             )
             x+=1
-            # if results_search == []:
-            #     return "No Result"
+        flash()
+        if subscriptions_list == []:
+            return render_template('error.html') #throws error page if none are found
 
         return render_template('subscriptions2.html', username=username, password=password, subscriptions_list=subscriptions_list)
 
@@ -188,29 +190,30 @@ def subscriptions_web():
 def search_by_genre_web():
     genre = ""
     if request.method == "POST":
-        if request.form['submit'] == 'Art':
+        if request.form['submit'] == 'Other:':
+            genre = request.form['other_genre'].lower()
+        elif request.form['submit'] == 'Art':
             genre = "art"
         elif request.form['submit'] == 'Comedy':
             genre = "comedy"
         elif request.form['submit'] == 'Educational':
-            genre = "Educational"
+            genre = "educational"
         elif request.form['submit'] == 'Gaming':
-            genre = "Gaming"
+            genre = "gaming"
         elif request.form['submit'] == 'Music':
-            genre = "Music"
+            genre = "music"
         elif request.form['submit'] == 'News':
-            genre = "News"
+            genre = "news"
         elif request.form['submit'] == 'Politics':
-            genre = "Politics"
+            genre = "politics"
         elif request.form['submit'] == 'Sci-Fi':
-            genre = "Sci-Fi"
+            genre = "sci-fi"
         elif request.form['submit'] == 'Sports':
-            genre = "Sports"
+            genre = "sports"
         elif request.form['submit'] == 'Technology':
-            genre = "Technology"
-        elif request.form['submit'] == 'Other':
-            genre = "comedy"
-        genre_inquiry = request.form['genre_inquiry']
+            genre = "technology"
+        else:
+            genre = request.form['other_genre'].lower()
         genre_results_search = []
         x=0
         for i in search_by_genre(genre):
@@ -222,8 +225,9 @@ def search_by_genre_web():
             }
             )
             x+=1
-            # if results_search == []:
-            #     return "No Result"
+
+        if genre_results_search == []:
+            return render_template('error.html') #throws error page if none are found
 
         return render_template('search_by_genre2.html', genre=genre, genre_results_search=genre_results_search)
 

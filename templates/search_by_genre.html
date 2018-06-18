@@ -1,11 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h5>Select Genre:<h5>
+    <h5>Select Genre:</h5>
     <form method = "POST" action="/search_by_genre">
         <div class = "form-group">
-            <!--<input type = "text" name = "genre_inquiry"> (e.g. Art, Comedy, Educational, Gaming, Music, News, Politics, Sci-Fi, Sports, Technology)-->
         </div>
-        <!--<input class = "btn btn-primary" type="submit" value="SEARCH">-->
         <input type="submit" name="submit" value="Art">
         <input type="submit" name="submit" value="Comedy"><br/><br/>
         <input type="submit" name="submit" value="Educational">
@@ -16,8 +14,8 @@
         <input type="submit" name="submit" value="Sci-Fi"><br/><br/>
         <input type="submit" name="submit" value="Sports">
         <input type="submit" name="submit" value="Technology"><br/><br/>
-        <input type="submit" name="submit" value="Technology"><br/><br/>
-        Other: <input type = "text" name = "other_genre">
+        <input type="submit" name="submit" value="Other:">
+        <input type ="text" name ="other_genre">
     </form>
-    (Search wait time may be up to 10 seconds)
+    (Search wait time may be up to 10-20 seconds)
 {% endblock content %}
