@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method = "POST" action="/subscriptions">
+        <div class = "form-group">
+            Username: <input type = "text" name = "username">
+
+            Password: <input type = "text" name = "password">
+        </div>
+        <input class = "btn btn-primary" type="submit" value="View Subscriptions">
+    </form>
+    (Invalid Username or Password may throw error)
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method = "POST" action="/search">
+        <div class = "form-group">
+            <input type = "text" name = "inquiry">
+        </div>
+        <input class = "btn btn-primary" type="submit" value="SEARCH">
+    </form>
+    (Search wait time may be up to 10 seconds)
+{% endblock content %}
