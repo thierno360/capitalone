@@ -176,7 +176,7 @@ def subscriptions_web():
             }
             )
             x+=1
-        flash()
+
         if subscriptions_list == []:
             return render_template('error.html') #throws error page if none are found
 
