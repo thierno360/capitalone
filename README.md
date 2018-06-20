@@ -4,7 +4,7 @@ By Thierno Diallo - University of Virginia '20
 
 ### Instructions:
 
-- Link to website: http://thierno-gpodder.sytes.net/
+- Link to website: https://thierno-capone-mindsumo.herokuapp.com/
 
 - The major functionality of this website can be found in the toolbar to the right.
 
@@ -21,8 +21,6 @@ By Thierno Diallo - University of Virginia '20
 - "MindSumo_Beta" is my early work on the project in order to get the functions to retrieve data with the api properly. Running this will allow you many of the similar functions of the website through a Python terminal (no graphical user interface).
 
 - The website has a tendency of running very slow locally meaning it will run even slower when running publicly.
-
-- The website is being hosted from my brother's Raspberry Pi device in San Francisco, CA which may also increase the delay when running the website.
 
 - In order to simplify the login mechanism and to avoid storing the user's session token, retrieving a user's subscriptions requires login each time.
 
